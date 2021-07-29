@@ -1,0 +1,72 @@
+{
+    "offers": [
+        {
+            "title" : "London",
+            "img" : "./img/london.jpg",
+            "price" : "59"
+        },
+        {
+            "title" : "Hamburg",
+            "img" : "./img/hamburg.jpg",
+            "price" : "79"
+        },
+        {
+            "title" : "Alicante",
+            "img" : "./img/alicante.jpg",
+            "price" : "89"
+        },
+        {
+            "title" : "Milano",
+            "img" : "./img/milano.jpg",
+            "price" : "119"
+        }
+    ],
+
+    "backgrounds" : [
+        {
+            "img" : "../img/bg1.png",
+            "title": "Enjoy our hot summer deals"
+        },
+        {
+            "img" : "../img/bg2.jpg",
+            "title": "Visit amazing places"
+        },
+        {
+            "img" : "../img/bg3.jpg",
+            "title": "Explore both flora and fauna"
+        },
+        {
+            "img" : "../img/bg4.jpg",
+            "title": "Taste what paradise feels like"
+        },
+        {
+            "img" : "../img/bg5.jpeg",
+            "title": "Tour the sea world"
+        }
+        
+    ],
+    
+    "perks": [
+        {
+            "img" : "./img/seat.png",
+            "title": "Reclinable seats",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque praesentium tenetur autem, error iste eos vitae laboriosam commodi dolorem eaque?"
+        },
+        {
+            "img" : "./img/leg.png",
+            "title": "Plenty of freedom",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque praesentium tenetur autem, error iste eos vitae laboriosam commodi dolorem eaque?"
+        },
+        {
+            "img" : "./img/cabin.png",
+            "title": "Free cabin luggage",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque praesentium tenetur autem, error iste eos vitae laboriosam commodi dolorem eaque?"
+        },
+        {
+            "img" : "./img/smile.png",
+            "title": "Friendly crew",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque praesentium tenetur autem, error iste eos vitae laboriosam commodi dolorem eaque?"
+        }
+    ]
+    
+}

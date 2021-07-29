@@ -1,0 +1,991 @@
+@import "../css/normalize.css";
+@import "./fonts";
+@import "./mixin";
+@import "./colors";
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'OpenSans';
+   
+}
+
+a{
+    text-decoration: none;
+    transition: all ease-in .2s;
+    @include hover-link();
+}
+
+body{
+    overflow-x: hidden;
+}
+h1{
+    font-family: 'OpenSans';
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 46px;  
+    margin-top: 0;
+    @media only screen  and (min-width: 320px) and (max-width: 768px){
+        font-size: 35px;
+
+    }
+}
+.wrapper{
+    max-width: 1185px;
+    margin: auto;
+    @media only screen and (min-width: 768px) and (max-width: 900px) {
+        width: 729px;
+    }
+    @media only screen and (min-width:650px) and (max-width: 768px){
+        width: 635px;
+    }
+    @media only screen  and (min-width: 320px) and (max-width: 650px){
+        width: 320px;
+
+    }
+}
+nav {
+    position: relative;
+    max-width: 1400px;
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-between;
+    
+}
+
+#logo{
+    position: absolute;
+    //left: 15px;
+    @media only screen and (max-width: 768px){
+        left: 20px;
+    }
+}
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1189px;
+    button{
+        margin: 19px 19px 19px 0;
+    }
+
+    @media only screen  and (max-width: 1380px){
+        width: 70%;
+
+    }
+
+    @media only screen  and (min-width: 650px) and (max-width: 768px){
+        width: 81%;
+
+    }
+
+    @media only screen  and (min-width: 320px) and (max-width: 650px){
+        height: 66px;
+    }   
+}
+
+
+#nav-links{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-size: 22px;
+    color: $light-blue;
+    li{
+        padding: 19px 42px 19px 0;
+        
+
+    }
+    @media only screen  and (min-width: 650px) and (max-width: 768px){
+        font-size: 20px;
+        letter-spacing: -1px;
+        margin-left: 31px;
+    }
+    @media only screen  and (min-width: 320px) and (max-width: 650px){
+        position: absolute;
+        right: 5px;
+        top: 25px;
+        font-size: 14px;
+        font-weight: bold;
+
+        li{
+            padding: 10px;
+        }
+    }   
+    @media only screen  and (max-width: 320px){
+        left: 115px;
+        
+    }
+}
+
+
+.login-form{
+    display: flex;
+
+    label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 24px;
+            height: 12px;
+            object-fit: cover;
+
+        }
+    }
+
+    select{
+        outline: none;
+        appearance:none;
+        margin-left: 10px;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color ease-in .2s;
+        @include hover-link();
+       
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+    @media only screen  and (min-width: 320px) and (max-width: 650px){
+        position: absolute;
+        right: 10px;
+        top: -10px;
+        font-size: 11px;
+        label{
+            top:10px;
+            position: relative;
+
+        }
+        select{
+            position: relative;
+            top:10px;
+
+        }
+    }  
+    
+}
+
+#login-btn{
+    text-transform: uppercase;
+    border: none;
+    background-color: $white;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: color ease-in .2s;
+    @include hover-link();
+
+    @media only screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+    @media only screen  and (min-width: 320px) and (max-width: 650px){
+        position: absolute;
+        right: 73px;
+        top: -13px;
+        font-size: 11px;
+    }   
+}
+
+main{
+    height: 558px;
+    background-image: url("/img/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    transition: background ease-in-out 1s;
+    @media only screen and (max-width: 768px) {
+    
+        background-size: cover;
+        height: 407px;
+    }
+    @media only screen  and (min-width: 320px) and (max-width: 650px){
+        background-size: cover;
+        h1{
+            font-size: 25px;
+        }
+
+    }
+}
+
+.main-wrapper {
+    width: 1185px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+   
+}
+
+.main-content{
+    width: 372px;
+    //padding-top: 170px;
+    color: $white;
+
+    
+    button{
+        width: 180px;
+        height: 60px;
+        margin-top: 7px;
+        background-color: #002f9d;
+        font-size: 24px;
+        color: $white;
+        border:none;
+        transition: background ease-in .2s;
+        cursor: pointer;
+        &:hover{
+            background-color: #02226b;
+        }
+       
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1200px){
+        padding-left: 20px;
+    }
+    @media only screen and (max-width: 768px){
+        padding-top: 0px ;
+        padding-left: 20px;
+    }
+    @media only screen  and (min-width: 320px) and (max-width: 650px){
+        width: 180px;
+        margin-top: 50px;
+        h1{
+            font-size: 25px;
+        }
+        button{
+            font-size: 14px;
+            width: 100px;
+            padding: 16px 5px;
+        }
+    }
+    
+}
+
+.main-buttons{
+    margin-top: 80px;
+    button{
+        border-radius: 100%;
+        font-size: 35px;
+        padding: 10px;
+        color: $white;
+        background-color: transparent;
+        border: 3px solid $shade-white;
+        margin: 5px;
+        transition: all ease-in .2s;
+        cursor: pointer;
+        &:hover{
+            border-color: $black;
+            color: $black;
+            @include hover-button();
+        }
+        
+    }
+    @media only screen and (max-width: 768px){
+        margin-top: 100px;
+        padding-right: 20px;
+    }
+    @media only screen  and (min-width: 320px) and (max-width: 650px){
+        margin-top: 300px;
+       button{
+            font-size: 14px;
+            padding: 5px;
+       }
+        
+    }
+}
+
+///  airplane section
+
+.airplane{
+    display: block;
+    text-align: center;
+    
+    h2{
+        //margin-top: 29px;
+        color: $link-blue;
+        font-size: 50px;
+        padding-top: 10px;
+        @media only screen and (max-width: 768px){
+            font-size: 32px;
+        }
+    }
+}
+
+#pre-title{
+    text-transform: uppercase;
+    color: $grey;
+    margin-top: 60px;
+    letter-spacing: 4px;
+    font-size: 16px;
+    @media only screen and (max-width: 768px){
+        margin-top: 28px;
+    }
+
+}
+
+.airplane-perks{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    margin-top: 83px;
+    
+    .perk{
+        width: 48%;
+        text-align: left;
+        padding: 0px 0px 70px 0px;
+        .perk--img{
+            float: left;
+            padding: 20px;
+            margin-left: 20px;
+            border: 5px solid $solid-white;
+            border-radius: 100%;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            @media only screen and (max-width: 768px){
+                margin-left: 0px;            
+            }
+        
+        }
+
+        .perk--desc{
+            margin-left: 133px;
+            color: $dark-blue;
+
+            h3{
+                font-size: 24px;
+            }
+            p{
+                padding-top: 15px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+            @media only screen and (max-width: 768px){
+                margin-left: 110px;
+
+            }
+        
+        }
+        @media only screen  and (min-width: 320px) and (max-width: 650px){
+            width: 100%;
+            padding: 10px;
+            .perk--img{
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        
+    }
+    @media only screen and (max-width: 768px){
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+
+// offers section
+
+.offers{
+    background-color: $background-blue;
+
+    .offers-inner{
+
+        height: 485px;
+        margin:auto;
+
+        h2{
+            padding-top: 42px;
+            font-size: 21px;
+            line-height: 45px;
+            font-weight: 400;
+            color: $white;
+            @media only screen and (min-width: 320px) and (max-width: 768px){
+                padding-left: 36px;
+            }
+            @media only screen and (min-width: 768px) and (max-width: 1200px){
+                padding-left: 20px;
+            }
+        }
+        @media only screen and (max-width: 1120px){
+            height: 840px;
+
+            
+        }
+        @media only screen and (max-width: 650px){
+            height: 1540px;
+
+        }
+    }
+
+}
+
+.offers-content{
+    flex-wrap: wrap;
+    //margin-top: 30px;
+    height: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+        justify-content: center;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1200px){
+        padding-left: 20px;
+    }
+}
+.offer:not(:first-of-type){
+    margin-left: 22px;
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.offer{
+    width: 240px;
+    height: 320px;
+    display: block;
+    background-color: $white;
+    color: $dark-blue;
+    margin: 14px 7px -2px 0;
+    transition: transform .2s;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    img{
+        height: 170px;
+    }
+    h3{
+        padding: 22px 6px 0px 52px;
+        font-size: 24px;
+    }
+    p{
+        margin-left: 54px;
+        margin-top: 5px;
+    }
+    button{
+        margin: 35px 0 24px -22px;
+        font-size: 20px;
+        font-weight: bold;
+        color: $background-blue;
+        cursor: pointer;
+    }
+    &:hover{
+        box-shadow: 0 0 100px rgba(0, 225, 255, 0.2); 
+        @include hover-button();
+    }
+    
+    @media only screen and (max-width: 1120px){
+        &:first-of-type{
+            margin-left: 22px;
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+        &:first-of-type{
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.book-btn{
+    background-color: transparent;
+    border: none;
+    transition: color ease-in .2s;
+    @include hover-link();
+}
+
+aside{
+    text-align: center;
+    padding: 49px;
+    color: $background-blue;
+
+    h2{
+        font-size: 30px;
+    }
+    a{
+        color: $background-blue;
+        font-size: 28px;
+        font-weight: lighter;
+        border-bottom: 5px dashed;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+        h2{
+            //padding: 70px;
+            display: inline-block;
+            a{
+                width: 62%;
+                margin: auto;
+                display: block;
+            }
+        }
+    }
+}
+
+
+.services{
+    background-color: $dark-blue;
+    color: $white;
+    text-align: center;
+    h3{
+        padding-top: 80px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: lighter;
+        color: $shade-white;
+
+    }
+
+    h4{
+        //padding-top:23px;
+        font-size: 50px;
+        font-weight: bold;
+        color: $light-blue;
+    }
+    p{
+        padding-top: 20px;
+        width: 28%;
+        margin: auto;
+        color: $dirty-white;
+        font-size: 20px;
+    }
+
+    a{
+        color: $light-blue;
+        border-bottom: 1px dashed;
+        float: right;
+        @include hover-link();
+    }
+    @media only screen and (max-width: 768px){
+        p{
+            width: 80%;
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+        h4{
+            padding: 10px;
+        }
+        a{
+            margin-right: 37px;
+        }
+    }
+}
+.services-link{
+    max-width: 1185px;
+    width: 50%;
+    margin: auto;
+   margin-top: 40px;
+   @media only screen and (max-width: 768px){
+        width: 100%;
+    }
+}
+
+.lines{
+    display: flex;
+    width: 50%;
+    height: 10px;
+    margin-top: 70px;
+    div{
+        width: 34%;
+        height: 10px;
+        transition: background ease-in .2s;
+    }
+    @media only screen and (max-width: 768px){
+        width: 90%;
+    }
+}
+
+// active
+.active-line{
+    background-color: $light-blue;
+}
+
+.inactive-line{
+    background-color: $solid-white;
+
+}
+
+.active-tab{
+    background-color: $white;
+    color: $tab-title;
+}
+
+.inactive-tab{
+    color: $light-brown;
+    background-color: $solid-white;
+    &:hover{
+        background-color: $soft-gray;
+    }
+
+}
+
+.tabs{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    button{
+        transition: background ease-in .2s;
+        font-weight: bold;
+        font-size: 25px;
+        width: 34%;
+        border: none;
+        cursor: pointer;
+        
+    }
+    @media only screen and (max-width: 768px){
+        width: 90%;
+        button{
+            font-size: 22px;
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 428px){
+        button{
+            font-size: 15px;
+        }
+    }
+}
+
+.tab-content{
+    width: 50%;
+
+    display: flex;
+    padding-bottom: 95px;
+    div{
+        background-color: $white;
+        width: 34%;
+        height: 250px;
+        img{
+            padding: 20px;
+        }
+        
+    }
+    @media only screen and (max-width: 768px){
+
+        div{
+            img{
+                padding: 10px 5px;
+                height: 100px; 
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+        width: 90%;
+
+        div{
+            width: 50%;
+            padding-bottom: 30px;
+            ul{
+                //text-align: center;
+
+                li{
+                    font-size: 12px;
+                }
+            }
+        }
+        .tab-content__image{
+            
+            display: none;
+        }
+        
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1350px){
+        .tab-content__image{
+            img{
+                padding: 75px 0;
+                height: 100px;
+            }
+        }
+        div{
+            ul{
+                li{
+                    font-size: 12px;
+
+                }
+            }
+        }
+    }
+}
+
+.tab-content__services{
+    ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;    
+        list-style: none;
+        text-align: left;
+
+    }
+    color: $dark-blue;
+    @media only screen and (min-width:320px) and (max-width: 768px){
+        padding-left: 30px;
+        padding-bottom: 20px;
+       
+    }
+}
+
+.tab-content__extra{
+    ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;    
+        list-style: none;
+        text-align: left;
+        li{
+            transition: color ease-in-out .3s;
+        }
+        @media only screen and (min-width:320px) and (max-width: 768px){
+            padding-left: 0px;
+            padding-bottom: 20px;
+           
+        }
+    }
+}
+
+.extra-items__unlocked{
+    color: $mix-blue;
+    &:before{
+        content: '\2714';
+        padding-right: 5px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    @media only screen and (max-width: 768px){
+        font-size: 15px;
+
+    }
+}
+
+.extra-items__locked{
+
+    color: $locked;
+    &:before{
+        content: '\0024';
+        padding-right: 5px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    @media only screen and (max-width: 768px){
+        font-size: 15px;
+
+    }
+}
+
+.subscribe{
+
+    padding-top: 31px;
+    padding-bottom: 21px;
+    display: flex;
+    background-color: $background-blue;
+    form{
+        width: 45%;
+        display: flex;
+
+        p{
+            color: $white;
+            font-size: 24px;
+        }
+
+
+        input{
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 60px;
+            border: none;
+            background-color:$background-blue;
+            cursor: pointer;
+            border-bottom: 1px solid $white;
+            color: $lighter-blue;
+            outline: none;
+            &:focus{
+                color: $white;
+               
+            }
+            &:focus::placeholder{
+                color: transparent;
+                opacity: 1;
+            }
+        }
+    
+        button{
+            border: none;
+            background-color: transparent;
+            color: $white;
+            border-bottom: 1px solid $white;
+            padding-bottom: 3px;
+            cursor: pointer;
+           @include hover-link();
+
+        }
+    }
+    @media only screen and (max-width: 1024px){
+        flex-direction: column;
+        height: 250px;
+        form{
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            input{
+                margin-left: 0;
+                padding-left: 0;
+                margin-top: 30px;
+            }
+
+            button{
+
+                margin-top: 30px;
+                width: 302px;
+                padding: 20px;
+                border: 1px solid $white;
+                background-color: $white;
+                font-weight: 700;
+                color: $background-blue;
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+        input{
+            margin-left: 0;
+        }
+    }
+}
+
+.social{
+    width: 30%;
+    display: flex;
+    float: left;
+    color: $white;
+    .social-links{
+        padding-top: 20px;
+    }
+    p{
+        padding: 30px;
+    }
+    a{
+        padding: 20px 5px;
+
+        img{
+            height: 23px;
+            @include hover-button();
+        }
+        
+    }
+    img{
+        padding: 5px;
+    }
+    @media only screen and (max-width: 1024px){
+        display: inline-block;
+        margin-top: 30px;
+        width: 100%;
+        background-color: $white;
+        color: $tab-title;
+        align-items: center;
+        p{
+            text-align: center;
+        }
+        .social-links{
+            align-items: center;
+            width: 20%;
+            margin:auto;
+            margin-bottom: 50px;
+        }
+        a{
+            padding: 10px;
+            img{
+                padding: 0;
+                margin-bottom: -5px;
+                width: 20px;
+                height: 20px;
+            }
+           background-color: $pure-blue;
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 1024px){
+        .social-links{
+            display: flex;
+            justify-content: space-evenly;
+            a{
+                margin: 5px;
+            }
+        }  
+    }
+}
+
+footer{
+    max-width: 1185px;
+    width: 100%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    .credit-cards{
+        float: left;
+        a{
+            padding: 20px;
+            &:hover{
+                img{
+                    @include hover-button();
+                } 
+            }
+        }
+        @media only screen and (max-width: 1024px){
+            float: none;
+            width: 70%;
+            margin: 70px auto 30px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    .terms{
+        float: right;
+        margin-top: 10px;
+        a{
+            padding: 20px;
+            color: $devil-brown;
+            font-size: 16px;
+            font-weight: 600;
+            &:hover{
+                color: $black;
+            }
+        }
+        @media only screen and (max-width: 1024px){
+            margin: auto;
+            float: none;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+.border{
+    margin-top: 50px;
+    height: 10px;
+    background-color: $light-blue;
+    @media only screen and (max-width: 768px){
+        height: 25px;
+    }
+}
+
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+button.disabled{
+    pointer-events: none;
+}
+
+#head-title{
+   transition: all ease-in-out 1s;
+}
